@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form color change</title>
+</head>
+
+<body>
+
+    <div>
+        <div id="theForm">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname"><br>
+            <label for="age">Your Age:</label><br>
+            <input type="number" id="age"><br>
+            <label for="job" id="jobtitle">Your Job Is?</label><br>
+            <input type="radio" id="it" value="it">
+            <label for="it">IT</label>
+            <input type="radio" id="hospital" value="hospital">
+            <label for="hospital">Hospital</label><br><br>
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+
+    <div id="showFname">
+
+    </div>
+
+    <div id="showLname">
+
+    </div>
+
+    <div id="showAge">
+    </div>
+
+    <div id="purple"></div>
+
+    <div id="yellow"></div>
+
+    <script>
+        function showFname() {
+            inputText = document.getElementById("fname").value;
+            document.getElementById("showFname").innerHTML = inputText;
+
+            var text = inputText.length;
+            if (text >= 5) {
+                document.getElementById("showFname").style.color = '#1dd1a1';
+            } else {
+                document.getElementById("showFname").style.color = '#ee5253';
+
+            }
+        }
+        document.getElementById("submit").addEventListener("click", showFname);
+
+        function showLname() {
+            inputText = document.getElementById("lname").value;
+            document.getElementById("showLname").innerHTML = inputText;
+
+            var text = inputText.length;
+            if (text >= 5) {
+                document.getElementById("showLname").style.color = '#1dd1a1';
+            } else {
+                document.getElementById("showLname").style.color = '#ee5253';
+
+            }
+        }
+        document.getElementById("submit").addEventListener("click", showLname);
+
+        function showAge() {
+            inputNumber = document.getElementById("age").value;
+            document.getElementById("showAge").innerHTML = inputNumber;
+
+
+        }
+        document.getElementById("submit").addEventListener("click", showAge);
+
+
+        function purple() {
+            inputRadio = document.getElementById("it").value;
+            document.getElementById("it").innerHTML = inputRadio;
+
+            var radioButn = inputRadio;
+
+            if (radioButn === it) {
+                document.getElementById("it").style.backgroundcolor = '#f368e0';
+            } else {
+                document.getElementById("showLname").style.color = '#ee5253';
+
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
