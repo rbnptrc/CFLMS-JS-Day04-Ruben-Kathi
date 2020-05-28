@@ -37,9 +37,13 @@
     <div id="showAge">
     </div>
 
-    <div id="purple"></div>
+    <div id="purple">
 
-    <div id="yellow"></div>
+    </div>
+
+    <div id="yellow">
+
+    </div>
 
     <script>
         function showFname() {
@@ -79,19 +83,17 @@
         document.getElementById("submit").addEventListener("click", showAge);
 
 
-        function purple() {
+        function changeColor() {
             inputRadio = document.getElementById("it").value;
             document.getElementById("it").innerHTML = inputRadio;
 
             var radioButn = inputRadio;
 
-            if (radioButn === it) {
-                document.getElementById("it").style.backgroundcolor = '#f368e0';
-            } else {
-                document.getElementById("showLname").style.color = '#ee5253';
-
+            if (it = true) {
+                return document.getElementById("purple").style.backgroundColor = '#f368e0';
             }
         }
+        document.getElementById("submit").addEventListener("click", changeColor);
     </script>
 
 
